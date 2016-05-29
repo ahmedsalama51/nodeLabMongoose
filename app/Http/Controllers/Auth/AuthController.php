@@ -7,6 +7,9 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Jenssegers\MongoDB\Model;
+use Carbon\Carbon;
+
 
 class AuthController extends Controller
 {
@@ -66,6 +69,7 @@ class AuthController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'created_at' => Carbon::now(),
             'password' => bcrypt($data['password']),
         ]);
     }

@@ -1,0 +1,25 @@
+$ laravel new pharma
+$ cd pharma
+$ php artisan serve --port 5000
+$ php artisan make:auth
+
+
+**************************************
+using mogodb on laravel
+
+$  composer require jenssegers/mongodb
+
+$  sudo apt-get install libpcre3-dev
+$  sudo pecl install mongodb
+
+$	subl /etc/php5/cli/php.ini
+$	subl /etc/php5/apache2/php.ini
+==> extension=mongodb.so
+
+First installed $ sudo apt-get install php5-gd 
+then $ sudo apt-get install php5-intl and
+last one was $ sudo apt-get install php5-xsl 
+$  composer update
+
+**********************************************
+$	 php artisan make:migration create_users_table

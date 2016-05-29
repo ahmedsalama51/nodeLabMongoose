@@ -77,12 +77,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         </li>
                                         <li><a href="{{ url('/register') }}">Register</a></li>
                                     @else
-                                        @if (Auth::user()->isAdmin())
-                                            <li><a href="/admin">Controle Panal</a></li>
-                                        @endif
-                                        @if (Auth::user()->section != Null)
-                                            <li><a href="/posts/add">Add Post</a></li>
-                                        @endif
                                         
                                         <li><a href="/users/{{ Auth::user()->id }}" > <img width="30px" height="20px" src="{{ Auth::user()->image }}" alt=""> {{ Auth::user()->name }} </a>
                                         <!-- {{ Auth::user()->name }} -->
@@ -141,7 +135,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             
             <div class="clearfix"> </div>
             <div class="copyright">
-                <p>Copyrights © 2016 ITI All rights reserved | Template by <a href="http://facebook.com/AhmedSalama51/">Ahmed Salama</a></p>
+                <div class="bottom-footer">
+                        <p>
+                            <span>Copyright © 2084 <a href="#">BusinessMonk</a> 
+                            | Design: <a rel="nofollow" href="#" target="_parent"><span class="blue">Pharmateam</span><span class="green">ITI</span></a></span>
+                        </p>
+                </div>
             </div>
         </div>
     </div>
